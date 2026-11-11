@@ -1,0 +1,1412 @@
+/* ==========================================================================
+   Typography & Professional Design System
+   Sleek, luxurious, highly readable Islamic Travel aesthetic
+   With soft pale sage-green ambient background blend
+   ========================================================================== */
+
+:root {
+  font-size: 16px;
+  --text-main: #1f382c;
+  --text-muted: #4e6357;
+  --text-soft: #63796d;
+  --gold-accent: #b3832b;
+  --green-accent: #087f65;
+  --bg-page: #f6f9f4;
+  --bg-tint: #edf4ea;
+  --bg-card: #ffffff;
+}
+
+/* ==========================================================================
+   GLOBAL FONT-SIZE OVERRIDES
+   Forces all inherited tiny font-sizes (6px–12px) up to readable sizes.
+   Every element the user reads must be >= 13px.
+   ========================================================================== */
+
+/* Base body typography */
+body, body * {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Hero assurance row */
+.hero-assurance {
+  font-size: 14px !important;
+}
+.hero-assurance > span {
+  font-size: 14px !important;
+  color: #4e6356 !important;
+}
+.hero-image-caption strong {
+  font-size: 14px !important;
+}
+.hero-image-caption span {
+  font-size: 12.5px !important;
+  color: #dbd9d1 !important;
+}
+
+/* eyebrows global */
+.eyebrow, [class*="eyebrow"] {
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.9px !important;
+}
+
+/* navigation global */
+.navigation {
+  font-size: 14.5px !important;
+}
+.brand small {
+  font-size: 11px !important;
+  letter-spacing: 1.5px !important;
+}
+.nav-cta {
+  font-size: 14px !important;
+}
+
+/* hero-season badge */
+.hero-season {
+  font-size: 12.5px !important;
+}
+
+/* announcement bar */
+.announcement {
+  font-size: 13px !important;
+}
+.announcement a {
+  font-size: 13px !important;
+}
+
+/* Select-wrap: trip finder dropdowns */
+.select-wrap select {
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+}
+.field-label {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+.finder-intro {
+  font-size: 14px !important;
+}
+
+/* Benefits band */
+.benefits-band li,
+.benefits-band span,
+.benefits-band p {
+  font-size: 14px !important;
+}
+
+/* agency.css small elements: image-note, hotel photo-nav counter */
+.image-note {
+  font-size: 12.5px !important;
+}
+.hotel-photo-nav > span {
+  font-size: 14px !important;
+}
+.hotel-photo-nav > span > span {
+  font-size: 13px !important;
+}
+.hotel-real-name {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+.hotel-real-name > span {
+  font-size: 14px !important;
+}
+.hotel-category > span {
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px !important;
+}
+
+/* Star rating */
+.hotel-stars svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* Segmented / tablist buttons */
+.segmented button,
+.hotel-tabs button,
+.city-tabs button {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+/* Services / Why-us cards */
+.service-index {
+  font-size: 13px !important;
+}
+.why-bottom {
+  font-size: 14.5px !important;
+}
+
+/* Booking / Contact forms */
+.booking-inner input:not([type="checkbox"]),
+.booking-inner select,
+.booking-inner textarea {
+  font-size: 15px !important;
+  min-height: 46px !important;
+  padding: 12px 14px !important;
+}
+.booking-inner input::placeholder,
+.booking-inner textarea::placeholder {
+  font-size: 14px !important;
+}
+.optional {
+  font-size: 12px !important;
+}
+.booking-inner .consent {
+  font-size: 13px !important;
+}
+.booking-actions button {
+  font-size: 15px !important;
+}
+
+/* Contact */
+.contact-form-card label {
+  font-size: 13.5px !important;
+}
+.contact-form-card input,
+.contact-form-card select,
+.contact-form-card textarea {
+  font-size: 15px !important;
+}
+
+/* Footer */
+.footer-brand > p {
+  font-size: 14.5px !important;
+}
+.footer-contacts a {
+  font-size: 14px !important;
+}
+.footer-bottom {
+  font-size: 13.5px !important;
+}
+
+/* Pricing note */
+.pricing-note {
+  font-size: 14px !important;
+}
+
+
+body {
+  font-size: 15.5px;
+  line-height: 1.68;
+  color: var(--text-main);
+  background-color: var(--bg-page);
+  /* Gentle, organic sage-green gradient blending throughout the page */
+  background-image: 
+    radial-gradient(at 10% 10%, rgba(223, 237, 220, 0.5) 0px, transparent 50%),
+    radial-gradient(at 90% 25%, rgba(226, 240, 222, 0.6) 0px, transparent 60%),
+    radial-gradient(at 20% 60%, rgba(220, 235, 218, 0.45) 0px, transparent 55%),
+    radial-gradient(at 85% 85%, rgba(225, 238, 222, 0.55) 0px, transparent 50%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --------------------------------------------------------------------------
+   Header & Navigation (Flawless, Spacious, Non-wrapping)
+   -------------------------------------------------------------------------- */
+.header {
+  height: 86px !important;
+  background: rgba(246, 250, 244, 0.95) !important;
+  backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(212, 226, 208, 0.8) !important;
+  transition: all 0.25s ease;
+}
+
+.nav-wrap {
+  max-width: 1240px !important;
+  width: calc(100% - 64px) !important;
+  margin-inline: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+  gap: 16px !important;
+}
+
+.brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex-shrink: 0 !important;
+}
+
+.brand-mark {
+  width: 36px !important;
+  height: 42px !important;
+  color: #a98b54 !important;
+}
+
+.brand strong {
+  font-family: var(--serif) !important;
+  font-size: 36px !important;
+  line-height: 1 !important;
+  letter-spacing: -0.5px !important;
+  color: #1a382d !important;
+}
+
+.brand small {
+  font-family: var(--sans) !important;
+  font-size: 9.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.8px !important;
+  color: #5d7567 !important;
+  margin-top: 4px !important;
+  display: block !important;
+}
+
+.navigation {
+  display: flex !important;
+  align-items: center !important;
+  gap: clamp(14px, 1.8vw, 24px) !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+.navigation > a {
+  font-family: var(--sans) !important;
+  font-size: 14px !important;
+  font-weight: 550 !important;
+  color: #274033 !important;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  padding: 8px 0 !important;
+  position: relative !important;
+  transition: color 0.2s ease !important;
+}
+
+.navigation > a:hover {
+  color: var(--green) !important;
+}
+
+.navigation > a::after {
+  content: "" !important;
+  position: absolute !important;
+  width: 0 !important;
+  height: 2px !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  background: var(--gold) !important;
+  transition: width 0.22s ease !important;
+  border-radius: 2px !important;
+}
+
+.navigation > a:hover::after {
+  width: 100% !important;
+}
+
+.nav-cta {
+  font-family: var(--sans) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  min-height: 42px !important;
+  padding: 9px 20px !important;
+  border-radius: 8px !important;
+  background: var(--green) !important;
+  color: #ffffff !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 4px 14px rgba(8, 127, 101, 0.22) !important;
+  transition: all 0.2s ease !important;
+}
+
+.nav-cta:hover {
+  background: #066752 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 18px rgba(8, 127, 101, 0.32) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Announcement Bar
+   -------------------------------------------------------------------------- */
+.announcement {
+  height: auto !important;
+  min-height: 38px !important;
+  padding: 8px 32px !important;
+  font-size: 13px !important;
+  letter-spacing: 0.3px !important;
+  background: var(--deep) !important;
+  color: #ebe7dc !important;
+}
+.announcement a {
+  font-size: 13px !important;
+  font-weight: 550 !important;
+  color: #dcd7c7 !important;
+}
+.announcement a:hover {
+  color: #f7e6b8 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Headings & Hierarchy (Serif Cormorant Garamond)
+   -------------------------------------------------------------------------- */
+h1 {
+  font-family: var(--serif) !important;
+  line-height: 1.05 !important;
+  letter-spacing: -1.2px !important;
+}
+
+h2 {
+  font-family: var(--serif) !important;
+  font-size: clamp(32px, 3.8vw, 46px) !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.6px !important;
+  color: #17362a !important;
+}
+h2 > span {
+  color: #6a8274 !important;
+  font-weight: 400 !important;
+}
+
+h3 {
+  font-family: var(--serif) !important;
+  font-size: clamp(20px, 2.2vw, 26px) !important;
+  line-height: 1.25 !important;
+}
+
+/* Eyebrows (Gold Category Labels) */
+.eyebrow,
+[class*="eyebrow"] {
+  font-family: var(--sans) !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.9px !important;
+  text-transform: uppercase !important;
+  color: var(--gold) !important;
+}
+
+/* Section Headings */
+.section-heading p {
+  font-size: 15.5px !important;
+  line-height: 1.7 !important;
+  color: var(--text-muted) !important;
+  max-width: 580px !important;
+}
+
+/* --------------------------------------------------------------------------
+   Section Alternating Subtle Green Backgrounds
+   -------------------------------------------------------------------------- */
+.why-section {
+  background: #edf5ea !important;
+  border-block: 1px solid #dce8d7 !important;
+}
+.destinations-section {
+  background: #edf5eb !important;
+  border-block: 1px solid #dbe8d6 !important;
+}
+.benefits-band {
+  background: #e9f3e5 !important;
+  border-block: 1px solid #d5e4d0 !important;
+}
+.guide-section {
+  background: #f1f7ee !important;
+  border-block: 1px solid #deead9 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Consultation Banner (GREEN BANNER CONTRAST FIX)
+   Image 2: "Siz niyat qiling" was dark on dark. Now 100% brilliant white!
+   -------------------------------------------------------------------------- */
+.consultation-banner {
+  background: linear-gradient(140deg, #07382f 0%, #0d4a3e 100%) !important;
+  border-radius: 18px !important;
+  padding: 48px 54px !important;
+  box-shadow: 0 16px 40px rgba(7, 56, 47, 0.22) !important;
+}
+.consultation-copy .eyebrow {
+  color: #e5d7af !important;
+  letter-spacing: 2px !important;
+}
+.consultation-copy h2 {
+  color: #ffffff !important;
+  font-size: 38px !important;
+  line-height: 1.18 !important;
+  margin-top: 8px !important;
+}
+.consultation-copy h2 span,
+.consultation-banner h2 span {
+  color: #ffffff !important;
+  font-weight: 550 !important;
+  display: inline-block !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+}
+.consultation-copy h2 em,
+.consultation-banner h2 em {
+  color: #f7e2a9 !important;
+  font-style: italic !important;
+}
+.consultation-copy > p {
+  color: #d6e5dd !important;
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  margin-top: 14px !important;
+}
+.consultation-action > span {
+  color: #cde0d5 !important;
+  font-size: 14px !important;
+}
+
+/* --------------------------------------------------------------------------
+   Travel Tools & Prayer Times Widget (CONTRAST & FONT SIZE FIX)
+   Addresses Image 3: Small numbers, weather text, disclaimers
+   -------------------------------------------------------------------------- */
+.prayer-widget {
+  background: #ffffff !important;
+  border: 1.5px solid #d8e5d2 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 10px 35px rgba(24, 62, 51, 0.06) !important;
+  padding: 32px !important;
+}
+
+/* Prayer Time Cards */
+.prayer-time {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  padding: 18px 10px 14px !important;
+  min-height: 146px !important;
+  border-radius: 12px !important;
+  gap: 6px !important;
+  position: relative !important;
+}
+.prayer-time > svg {
+  margin-bottom: 2px !important;
+  flex-shrink: 0 !important;
+}
+.prayer-time span {
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  flex-shrink: 0 !important;
+}
+.prayer-time strong {
+  font-family: var(--sans) !important;
+  font-size: 25px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.5px !important;
+  line-height: 1.2 !important;
+  margin: 2px 0 0 0 !important;
+  flex-shrink: 0 !important;
+}
+.prayer-time small {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  font-size: 11.5px !important;
+  font-weight: 600 !important;
+  color: #fff8d6 !important;
+  background: rgba(0, 0, 0, 0.28) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  border-radius: 999px !important;
+  padding: 3px 10px !important;
+  line-height: 1.2 !important;
+  margin-top: 6px !important;
+  margin-bottom: 0 !important;
+  white-space: nowrap !important;
+  position: static !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+}
+
+.prayer-widget-caption {
+  font-size: 13.5px !important;
+  color: #435e50 !important;
+  font-weight: 550 !important;
+  margin-top: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+.prayer-widget-caption > span {
+  font-size: 13.5px !important;
+  color: #435e50 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+.prayer-widget-caption > a,
+.prayer-widget-caption > button {
+  font-size: 13px !important;
+  color: var(--green) !important;
+  font-weight: 650 !important;
+}
+
+/* Quote strip: Har kun — yangi shukr */
+.travel-quote-strip {
+  background: linear-gradient(135deg, #eef5eb 0%, #e2ede0 100%) !important;
+  border: 1px solid #cddfc9 !important;
+  border-radius: 14px !important;
+  padding: 22px 28px !important;
+  margin-top: 24px !important;
+}
+.travel-quote-strip > p {
+  font-family: var(--serif) !important;
+  font-size: 23px !important;
+  color: #17382c !important;
+  line-height: 1.4 !important;
+}
+.travel-quote-strip strong {
+  font-family: var(--sans) !important;
+  font-size: 14px !important;
+  color: #3b5a48 !important;
+  font-weight: 600 !important;
+  margin-top: 6px !important;
+  display: block !important;
+}
+
+/* Weather Bar */
+.travel-weather {
+  border-top: 1.5px solid #dce8d6 !important;
+  margin-top: 24px !important;
+  padding-top: 22px !important;
+  gap: 16px !important;
+}
+.weather-label {
+  font-size: 12.5px !important;
+  font-weight: 750 !important;
+  letter-spacing: 1.6px !important;
+  color: #516b5a !important;
+  line-height: 1.6 !important;
+}
+.weather-item {
+  background: #f7faf5 !important;
+  border: 1.5px solid #dce8d6 !important;
+  border-radius: 12px !important;
+  padding: 14px 18px !important;
+  min-height: 80px !important;
+  transition: all 0.2s ease !important;
+}
+.weather-item:hover,
+.weather-item.weather-active {
+  background: #eef6ec !important;
+  border-color: #aed1b8 !important;
+  box-shadow: 0 4px 14px rgba(8, 127, 101, 0.08) !important;
+}
+.weather-item > div > span {
+  font-size: 15px !important;
+  color: #1a3328 !important;
+  font-weight: 650 !important;
+  gap: 8px !important;
+}
+.weather-item strong {
+  font-size: 26px !important;
+  color: #0f2820 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.5px !important;
+}
+.weather-item small {
+  font-size: 13.5px !important;
+  color: #2c4a3c !important;
+  font-weight: 550 !important;
+}
+.weather-item p {
+  font-size: 13px !important;
+  color: #2e4a3d !important;
+  font-weight: 500 !important;
+  margin-top: 4px !important;
+}
+.weather-attribution {
+  font-size: 13px !important;
+  color: #3a5447 !important;
+  font-weight: 500 !important;
+  margin-top: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+.weather-attribution span {
+  font-size: 13px !important;
+  color: #557262 !important;
+}
+.weather-attribution a {
+  font-size: 13px !important;
+  color: var(--green) !important;
+  font-weight: 600 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Destinations (Ziyorat Manzillari) (Image 1 & 5 fix)
+   -------------------------------------------------------------------------- */
+.destination-main {
+  border-radius: 16px !important;
+}
+.destination-tag {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  background: rgba(14, 40, 32, 0.8) !important;
+  color: #ffffff !important;
+  padding: 6px 14px !important;
+  border-radius: 20px !important;
+  backdrop-filter: blur(8px) !important;
+}
+.destination-copy {
+  padding: 36px !important;
+}
+.destination-copy > span {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+  color: #e5d8b8 !important;
+}
+.destination-copy > h3 {
+  font-size: 38px !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  margin-top: 6px !important;
+}
+.destination-copy > p {
+  font-size: 15.5px !important;
+  color: #dbe8e1 !important;
+  line-height: 1.65 !important;
+  margin-top: 10px !important;
+}
+.destination-side {
+  border-radius: 16px !important;
+  background: #ffffff !important;
+  border: 1px solid #dce8d6 !important;
+  box-shadow: 0 8px 30px rgba(24, 62, 51, 0.05) !important;
+}
+.destination-small-photo > span {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  background: rgba(14, 40, 32, 0.75) !important;
+  padding: 6px 14px !important;
+  border-radius: 18px !important;
+  backdrop-filter: blur(6px) !important;
+}
+.destination-list {
+  padding: 28px 32px !important;
+}
+.destination-list .eyebrow {
+  font-size: 13px !important;
+  font-weight: 750 !important;
+  letter-spacing: 1.8px !important;
+  color: #b3832b !important;
+  margin-bottom: 18px !important;
+  display: block !important;
+}
+.destination-list > div {
+  padding: 15px 0 !important;
+  gap: 16px !important;
+  border-bottom: 1px solid #e2ece0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+.destination-list > div > span {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #8c7d5c !important;
+  letter-spacing: 0.5px !important;
+}
+.destination-list > div > strong {
+  font-size: 16.5px !important;
+  font-weight: 600 !important;
+  color: #17382c !important;
+}
+.destination-list > div > svg {
+  color: #4e705f !important;
+  margin-left: auto !important;
+  width: 18px !important;
+  height: 18px !important;
+}
+.destination-list > p {
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  color: #496354 !important;
+  margin-top: 18px !important;
+  line-height: 1.6 !important;
+}
+.destination-item:hover {
+  color: var(--green) !important;
+}
+.destination-copy > p {
+  font-size: 13.5px !important;
+  color: #556e60 !important;
+  font-weight: 500 !important;
+  margin-top: 18px !important;
+}
+.destination-badge {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  background: rgba(14, 40, 32, 0.78) !important;
+  color: #ffffff !important;
+  padding: 6px 14px !important;
+  border-radius: 20px !important;
+}
+
+/* --------------------------------------------------------------------------
+   Common Buttons
+   -------------------------------------------------------------------------- */
+.button,
+button.button {
+  font-family: var(--sans) !important;
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+  min-height: 48px !important;
+  padding-inline: 24px !important;
+  border-radius: 8px !important;
+  letter-spacing: 0.1px !important;
+}
+.button-outline {
+  font-size: 14.5px !important;
+  border-radius: 8px !important;
+}
+.link-button,
+.text-button {
+  font-family: var(--sans) !important;
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Hero Section
+   -------------------------------------------------------------------------- */
+.hero h1 {
+  font-size: clamp(48px, 5.5vw, 78px) !important;
+}
+.hero-copy > p {
+  font-size: 16.5px !important;
+  line-height: 1.72 !important;
+  max-width: 440px !important;
+  color: #4b6356 !important;
+}
+.hero-assurance {
+  font-size: 13.5px !important;
+  color: #556c5e !important;
+  gap: 20px !important;
+}
+.hero-season {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.8px !important;
+  padding: 8px 16px !important;
+  border-radius: 20px !important;
+}
+
+/* --------------------------------------------------------------------------
+   Trip Finder Search Bar
+   -------------------------------------------------------------------------- */
+.trip-finder {
+  background: #ffffff !important;
+  border: 1px solid #dbe6d5 !important;
+  border-radius: 12px !important;
+  padding: 20px 24px !important;
+  box-shadow: 0 10px 35px rgba(24, 62, 51, 0.06) !important;
+}
+.finder-intro {
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+}
+.field-label {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #5c7567 !important;
+  margin-bottom: 5px !important;
+}
+.select-wrap select {
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+}
+.trip-finder .button {
+  min-height: 46px !important;
+  font-size: 14px !important;
+}
+
+/* --------------------------------------------------------------------------
+   Services & Why Us
+   -------------------------------------------------------------------------- */
+.agency-services article {
+  background: #ffffff !important;
+  border: 1px solid #dce8d6 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 6px 20px rgba(24, 62, 51, 0.03) !important;
+}
+.agency-services article h3 {
+  font-size: 19px !important;
+  margin-block: 10px 6px !important;
+  color: #17382c !important;
+}
+.agency-services article p {
+  font-size: 14.5px !important;
+  line-height: 1.65 !important;
+  color: var(--text-muted) !important;
+}
+.service-index {
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+}
+
+.why-card {
+  background: #ffffff !important;
+  border: 1px solid #dce8d6 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 6px 20px rgba(24, 62, 51, 0.03) !important;
+}
+.why-card h3 {
+  font-size: 18px !important;
+  color: #17382c !important;
+}
+.why-card p {
+  font-size: 14.5px !important;
+  line-height: 1.65 !important;
+  color: var(--text-muted) !important;
+}
+.why-bottom {
+  font-size: 14.5px !important;
+}
+.why-bottom span,
+.why-bottom em {
+  font-size: 14.5px !important;
+}
+
+/* --------------------------------------------------------------------------
+   Packages Section
+   -------------------------------------------------------------------------- */
+.package-card {
+  background: #ffffff !important;
+  border: 1px solid #dce8d6 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 25px rgba(24, 62, 51, 0.04) !important;
+}
+.package-title h3 {
+  font-size: 26px !important;
+  color: #17382c !important;
+}
+.package-subtitle {
+  font-size: 13.5px !important;
+  color: var(--text-muted) !important;
+}
+.package-price > strong {
+  font-size: 32px !important;
+  letter-spacing: -0.8px !important;
+}
+.package-price > strong > span {
+  font-size: 20px !important;
+}
+.package-price > span {
+  font-size: 12.5px !important;
+  line-height: 1.5 !important;
+  color: var(--text-muted) !important;
+}
+.package-features li {
+  font-size: 14px !important;
+  line-height: 1.55 !important;
+  color: #385044 !important;
+}
+.package-button {
+  font-size: 14px !important;
+  min-height: 46px !important;
+  border-radius: 8px !important;
+}
+.hotel-badge,
+.popular-badge,
+.duration-badge {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  border-radius: 6px !important;
+  padding: 5px 10px !important;
+}
+.pricing-note {
+  font-size: 13.5px !important;
+  color: #637b6f !important;
+}
+
+/* --------------------------------------------------------------------------
+   Hotels Showcase
+   -------------------------------------------------------------------------- */
+.hotel-showcase {
+  background: #ffffff !important;
+  border: 1px solid #dbe6d5 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 35px rgba(24, 62, 51, 0.05) !important;
+}
+.hotel-info h3 {
+  font-size: 30px !important;
+  color: #17382c !important;
+}
+.hotel-info > p {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+  color: var(--text-muted) !important;
+}
+.hotel-amenities > span {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #385044 !important;
+}
+.hotel-info > .hotel-disclaimer {
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  color: #6e8276 !important;
+}
+.hotel-tabs button {
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  padding: 8px 16px !important;
+  white-space: nowrap !important;
+}
+
+/* Hotel mini strip / selector cards */
+.hotels-carousel-strip {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important;
+  gap: 14px !important;
+  margin-top: 26px !important;
+}
+.hotel-mini-card {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  background: #ffffff !important;
+  border: 1.5px solid #dce6d6 !important;
+  border-radius: 12px !important;
+  padding: 12px 16px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  text-align: left !important;
+  box-shadow: 0 4px 16px rgba(24, 62, 51, 0.04) !important;
+}
+.hotel-mini-card:hover {
+  background: #f4f8f2 !important;
+  border-color: #bcd0b6 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(8, 127, 101, 0.1) !important;
+}
+.hotel-mini-card.active {
+  background: #edf5eb !important;
+  border-color: var(--green) !important;
+  box-shadow: 0 6px 22px rgba(8, 127, 101, 0.2) !important;
+}
+.hotel-mini-img {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 8px !important;
+  object-fit: cover !important;
+  flex-shrink: 0 !important;
+}
+.hotel-mini-info strong {
+  display: block !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #17382c !important;
+  line-height: 1.3 !important;
+}
+.hotel-mini-info small {
+  display: block !important;
+  font-size: 12.5px !important;
+  color: #557262 !important;
+  margin-top: 4px !important;
+  font-weight: 550 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Itinerary Timeline
+   -------------------------------------------------------------------------- */
+.itinerary-intro > p {
+  font-size: 15.5px !important;
+  line-height: 1.75 !important;
+  color: var(--text-muted) !important;
+}
+.timeline-item {
+  background: #ffffff !important;
+  border: 1px solid #dce6d6 !important;
+  border-radius: 12px !important;
+  padding: 18px 24px !important;
+  box-shadow: 0 4px 18px rgba(24, 62, 51, 0.03) !important;
+}
+.timeline-item h3 {
+  font-size: 18px !important;
+  color: #17382c !important;
+}
+.timeline-item p {
+  font-size: 14.5px !important;
+  line-height: 1.65 !important;
+  color: var(--text-muted) !important;
+}
+.timeline-days {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Payments & FAQ
+   -------------------------------------------------------------------------- */
+.payment-intro h2 {
+  font-size: 36px !important;
+}
+.payment-intro > p {
+  font-size: 15.5px !important;
+  line-height: 1.7 !important;
+}
+.payment-option {
+  background: #ffffff !important;
+  border: 1.5px solid #dce6d6 !important;
+  border-radius: 12px !important;
+}
+.payment-option strong {
+  font-size: 15.5px !important;
+}
+.payment-option small {
+  font-size: 13px !important;
+}
+.payment-card-content h3 {
+  font-size: 21px !important;
+}
+.payment-card-content p {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+}
+
+.faq-intro > p {
+  font-size: 15.5px !important;
+  line-height: 1.7 !important;
+}
+.faq-item {
+  background: #ffffff !important;
+  border: 1px solid #dce6d6 !important;
+  border-radius: 12px !important;
+  margin-bottom: 12px !important;
+  padding-inline: 20px !important;
+}
+.faq-item h3 button {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 1.45 !important;
+  padding-block: 16px !important;
+  color: #17382c !important;
+}
+.faq-answer > p {
+  font-size: 15px !important;
+  line-height: 1.75 !important;
+  color: var(--text-muted) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Contact Form & Footer
+   -------------------------------------------------------------------------- */
+.contact-form-card {
+  background: #ffffff !important;
+  border: 1px solid #dce6d6 !important;
+  border-radius: 16px !important;
+  padding: 36px !important;
+}
+.contact-form-card h2 {
+  font-size: 34px !important;
+}
+.contact-form-card > p {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+}
+.contact-form-card label {
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+}
+.contact-form-card input,
+.contact-form-card select,
+.contact-form-card textarea {
+  font-size: 14.5px !important;
+  border-radius: 8px !important;
+}
+.contact-details-heading h3 {
+  font-size: 21px !important;
+}
+.contact-details-description {
+  font-size: 14.5px !important;
+}
+.contact-detail-list strong {
+  font-size: 13px !important;
+}
+.contact-detail-list a,
+.contact-detail-list span {
+  font-size: 14.5px !important;
+}
+
+.booking-inner {
+  border-radius: 18px !important;
+  padding: 38px !important;
+}
+.booking-inner h2 {
+  font-size: 32px !important;
+  color: #17382c !important;
+}
+.booking-description {
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+}
+.booking-recap strong {
+  font-size: 15.5px !important;
+}
+.booking-recap span {
+  font-size: 14px !important;
+}
+.booking-form label {
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+}
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  font-size: 14.5px !important;
+  border-radius: 8px !important;
+}
+
+.footer-brand > p {
+  font-size: 14.5px !important;
+  line-height: 1.7 !important;
+  color: #496153 !important;
+}
+.footer-contacts a {
+  font-size: 14px !important;
+}
+.footer-contact-copy strong {
+  font-size: 14px !important;
+}
+.footer-contact-copy span {
+  font-size: 13.5px !important;
+}
+.footer-bottom {
+  font-size: 13.5px !important;
+}
+.footer-bottom a {
+  font-size: 13.5px !important;
+}
+.footer-admin-link {
+  font-size: 13.5px !important;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Media Queries for Header & Navigation
+   -------------------------------------------------------------------------- */
+@media (max-width: 1180px) {
+  .navigation {
+    gap: 16px !important;
+  }
+  .navigation > a {
+    font-size: 13.5px !important;
+  }
+  .brand strong {
+    font-size: 30px !important;
+  }
+  .nav-cta {
+    padding: 8px 16px !important;
+    font-size: 13.5px !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .navigation {
+    display: none !important;
+  }
+  .navigation.is-open {
+    display: flex !important;
+    flex-direction: column !important;
+    position: absolute !important;
+    top: 86px !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid #dce4d6 !important;
+    padding: 24px 32px !important;
+    gap: 18px !important;
+    box-shadow: 0 15px 35px rgba(24, 62, 51, 0.12) !important;
+    z-index: 50 !important;
+  }
+  .navigation.is-open > a {
+    font-size: 16px !important;
+    padding-block: 6px !important;
+    width: 100% !important;
+  }
+  .menu-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 8px !important;
+    border: 1px solid #d6dec9 !important;
+    background: #fbfaf6 !important;
+    color: var(--deep) !important;
+    cursor: pointer !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .header {
+    height: 74px !important;
+  }
+  .nav-wrap {
+    width: calc(100% - 32px) !important;
+  }
+  .brand strong {
+    font-size: 28px !important;
+  }
+  .brand small {
+    display: none !important;
+  }
+  .nav-cta {
+    display: none !important;
+  }
+  .consultation-banner {
+    padding: 32px 24px !important;
+  }
+  .mobile-contact {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-top: 10px !important;
+    min-height: 44px !important;
+    background: var(--green) !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 14.5px !important;
+  }
+}
+
+
+/* ==========================================================================
+   SELECT / OPTION STYLES — Professional & Readable
+   ========================================================================== */
+
+/* Base select element used in booking forms, trip finder, etc. */
+select {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235c7a65' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px center !important;
+  background-size: 16px !important;
+  padding-right: 36px !important;
+  cursor: pointer !important;
+  font-size: 15px !important;
+  color: #1f382c !important;
+  line-height: 1.5 !important;
+}
+
+select:focus {
+  outline: 2px solid var(--green) !important;
+  outline-offset: 2px !important;
+  border-color: var(--green) !important;
+}
+
+/* Booking form selects */
+.booking-inner select,
+.booking-form select {
+  background-color: #fafdf8 !important;
+  border: 1.5px solid #c8dac2 !important;
+  border-radius: 10px !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #1f382c !important;
+  min-height: 48px !important;
+  padding: 12px 36px 12px 14px !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+.booking-inner select:hover,
+.booking-form select:hover {
+  border-color: #a2c4a8 !important;
+  background-color: #f5faf4 !important;
+}
+.booking-inner select:focus,
+.booking-form select:focus {
+  border-color: var(--green) !important;
+  box-shadow: 0 0 0 3px rgba(8, 127, 101, 0.12) !important;
+}
+
+/* Contact form selects */
+.contact-form-card select {
+  background-color: #fafdf8 !important;
+  border: 1.5px solid #cddbc6 !important;
+  border-radius: 10px !important;
+  font-size: 15px !important;
+  min-height: 46px !important;
+  padding: 10px 36px 10px 14px !important;
+}
+
+/* Select-wrap (trip finder) */
+.select-wrap {
+  position: relative !important;
+  background: #fafdf8 !important;
+  border: 1.5px solid #cddbc6 !important;
+  border-radius: 10px !important;
+  padding: 10px 36px 10px 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  transition: border-color 0.2s ease !important;
+}
+.select-wrap:hover {
+  border-color: #a2c4a8 !important;
+  background: #f5faf4 !important;
+}
+.select-wrap select {
+  border: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  padding: 0 !important;
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+  color: #1f382c !important;
+}
+.select-wrap > svg {
+  position: absolute !important;
+  right: 12px !important;
+  color: #5c7a65 !important;
+  pointer-events: none !important;
+}
+
+/* Prayer city selector */
+.prayer-city-selector {
+  background: #eef4e6 !important;
+  border: 1.5px solid #c8d9c0 !important;
+  border-radius: 10px !important;
+  padding: 8px 14px !important;
+  gap: 7px !important;
+  color: #3d6248 !important;
+  font-size: 14px !important;
+  transition: all 0.2s ease !important;
+}
+.prayer-city-selector:hover {
+  background: #e3eed8 !important;
+  border-color: #a8c8a0 !important;
+}
+.prayer-city-selector > select {
+  font-size: 14px !important;
+  font-weight: 650 !important;
+  color: #2d5340 !important;
+  background-image: none !important;
+  padding: 0 !important;
+  border: 0 !important;
+  min-width: 90px !important;
+}
+
+/* Option elements (platform-limited but improved where possible) */
+select option {
+  font-size: 15px !important;
+  color: #1f382c !important;
+  background-color: #fafdf8 !important;
+  padding: 10px !important;
+}
+
+/* Admin panel select */
+.admin-field select,
+.admin-form select {
+  background-color: #f8fbf7 !important;
+  border: 1.5px solid #c8dac2 !important;
+  border-radius: 8px !important;
+  font-size: 14.5px !important;
+  color: #1f382c !important;
+  min-height: 42px !important;
+  padding: 10px 36px 10px 12px !important;
+}
