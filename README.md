@@ -46,6 +46,14 @@ HTTPS reverse proxy ishlatilganda `UMRA_SECURE_COOKIES=1` belgilang.
 Saytdagi ariza SQLite bazaga saqlanadi va admin panelga tushadi. Avtomatik
 bron yoki to‘lov yaratilmaydi. Email/Telegram xabarnoma integratsiyasi yo‘q.
 
+## Bulutga joylash (Render.com Deploy)
+
+Loyiha bulutda 24/7 ishlashi uchun Render bilan to‘liq moslashtirilgan (`render.yaml` mavjud):
+
+1. [Render.com](https://render.com) saytida GitHub orqali kiring.
+2. **New +** -> **Blueprint** orqali `Umraga-yollanma` repozitoriyasini tanlang.
+3. Loyiha avtomatik ravishda Node.js 22 muhitida build qilinadi va ishga tushadi.
+
 ## Ma’lumotlar
 
 `.local/safar.sqlite3` — konfiguratsiya, arizalar va admin hisobi;

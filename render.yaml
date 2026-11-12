@@ -11,3 +11,4 @@ services:
         value: 22.12.0
       - key: UMRA_DB_PATH
         value: .local/safar.sqlite3
+
