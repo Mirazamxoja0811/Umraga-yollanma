@@ -54,6 +54,9 @@ Loyiha bulutda 24/7 ishlashi uchun Render bilan to‘liq moslashtirilgan (`rende
 2. **New +** -> **Blueprint** orqali `Umraga-yollanma` repozitoriyasini tanlang.
 3. Loyiha avtomatik ravishda Node.js 22 muhitida build qilinadi va ishga tushadi.
 
+---
+*Loyiha faol rivojlantirilmoqda va yangilanmoqda.*
+
 ## Ma’lumotlar
 
 `.local/safar.sqlite3` — konfiguratsiya, arizalar va admin hisobi;
