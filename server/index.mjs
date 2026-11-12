@@ -522,10 +522,11 @@ const server = createServer(async (req, res) => {
     else res.end();
   }
 });
-const port = Number(process.env.UMRA_API_PORT || 5182);
-server.listen(port, "127.0.0.1", () =>
+const port = Number(process.env.PORT || process.env.UMRA_API_PORT || 5182);
+const host = process.env.HOST || "0.0.0.0";
+server.listen(port, host, () =>
   console.log(
-    `Umra API: http://127.0.0.1:${port}${!getAdmin() ? " — /admin orqali administrator yarating." : ""}`,
+    `Umra API: http://${host === "0.0.0.0" ? "127.0.0.1" : host}:${port}${!getAdmin() ? " — /admin orqali administrator yarating." : ""}`,
   ),
 );
 function shutdown() {
