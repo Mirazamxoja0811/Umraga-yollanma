@@ -55,7 +55,7 @@ Loyiha bulutda 24/7 ishlashi uchun Render bilan to‘liq moslashtirilgan (`rende
 3. Loyiha avtomatik ravishda Node.js 22 muhitida build qilinadi va ishga tushadi.
 
 ---
-*Loyiha faol rivojlantirilmoqda va yangilanmoqda.*
+*Loyiha faol rivojlantirilmoqda va muntazam yangilanmoqda.*
 
 ## Ma’lumotlar
 
