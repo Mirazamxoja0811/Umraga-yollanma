@@ -2013,8 +2013,9 @@ h2>span {
   opacity: 0;
   transform: translateY(26px);
   transition:
-    opacity 0.48s ease-out,
-    transform 0.48s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.7s ease-out,
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
 }
 
 .will-reveal[data-reveal-delay="1"] {
@@ -2028,6 +2029,39 @@ h2>span {
 .will-reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Ambient background ornaments drift slowly as the page moves. */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  width: min(44vw, 38rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(72px);
+  opacity: .27;
+  animation: ambient-drift 24s ease-in-out infinite alternate;
+}
+
+body::before {
+  left: -18rem;
+  top: 18vh;
+  background: radial-gradient(circle, #b4d7b5, transparent 68%);
+}
+
+body::after {
+  right: -20rem;
+  top: 55vh;
+  background: radial-gradient(circle, #e6d7ad, transparent 68%);
+  animation-delay: -12s;
+}
+
+@keyframes ambient-drift {
+  from { transform: translate3d(0, -2vh, 0) scale(.92); }
+  to { transform: translate3d(3vw, 3vh, 0) scale(1.08); }
 }
 
 .package-card.will-reveal.is-visible:hover {
@@ -4043,6 +4077,7 @@ h2>span {
   .will-reveal {
     opacity: 1;
     transform: none;
+    will-change: auto;
   }
 
   .package-card:hover {
