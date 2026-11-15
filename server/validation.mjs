@@ -37,9 +37,10 @@ export function validateConfig(value) {
       "contactName",
       "mapQuery",
       "paymentNote",
-      "telegramBotToken",
-      "telegramChatId",
-    ].every((k) => text(s[k], 700, false))
+    ].every((k) => text(s[k], 700, false)) &&
+    ["telegramBotToken", "telegramChatId"].every(
+      (k) => s[k] === undefined || text(s[k], 700, false),
+    )
   )
     return false;
   if (s.phone && !/^\+998\d{9}$/.test(s.phone)) return false;
@@ -143,7 +144,10 @@ export function validateLead(input, config) {
     return "Ismingizni to‘liqroq kiriting.";
   if (typeof input.phone !== "string" || !/^\+998\d{9}$/.test(input.phone))
     return "Telefon raqamini +998 va 9 ta raqam bilan kiriting.";
-  if (typeof input.note !== "string" || input.note.length > 1000)
+  if (
+    input.note !== undefined &&
+    (typeof input.note !== "string" || input.note.length > 1000)
+  )
     return "Izoh 1000 belgidan oshmasin.";
   if (
     !Number.isInteger(input.travelers) ||
@@ -153,10 +157,14 @@ export function validateLead(input, config) {
     return "Sayohatchilar sonini tekshiring.";
   if (
     ![10, 14, 21].includes(input.duration) ||
+    !Array.isArray(config?.months) ||
     !config.months.includes(input.month)
   )
     return "Safar sanasi yoki davomiyligini tekshiring.";
-  if (!config.packages.some((p) => p.id === input.packageId))
+  if (
+    !Array.isArray(config?.packages) ||
+    !config.packages.some((p) => p.id === input.packageId)
+  )
     return "Paketni qayta tanlang.";
   if (input.consent !== true)
     return "Ma’lumotlarni yuborish uchun rozilik kerak.";

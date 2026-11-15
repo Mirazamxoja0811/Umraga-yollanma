@@ -217,15 +217,23 @@ async function sendTelegramNotification(lead) {
     } catch {}
   }
   if (!token || !chatId) return;
+  const escapeHtml = (value) =>
+    String(value ?? "").replace(/[&<>"']/g, (character) => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;",
+    })[character]);
   const text =
     `🕋 <b>Yangi Umra arizasi qabul qilindi!</b>\n\n` +
-    `👤 <b>Mijoz:</b> ${lead.name}\n` +
-    `📞 <b>Telefon:</b> ${lead.phone}\n` +
-    `📦 <b>Paket:</b> ${lead.package} (${lead.duration} kunlik)\n` +
+    `👤 <b>Mijoz:</b> ${escapeHtml(lead.name)}\n` +
+    `📞 <b>Telefon:</b> ${escapeHtml(lead.phone)}\n` +
+    `📦 <b>Paket:</b> ${escapeHtml(lead.package)} (${lead.duration} kunlik)\n` +
     `👥 <b>Ziyoratchilar soni:</b> ${lead.travelers} kishi\n` +
-    `📅 <b>Rejalashtirilgan oy:</b> ${lead.month}\n` +
+    `📅 <b>Rejalashtirilgan oy:</b> ${escapeHtml(lead.month)}\n` +
     `💰 <b>Umumiy summa:</b> $${lead.price?.toLocaleString() || 0}\n` +
-    (lead.note ? `📝 <b>Izoh:</b> ${lead.note}\n` : "") +
+    (lead.note ? `📝 <b>Izoh:</b> ${escapeHtml(lead.note)}\n` : "") +
     `\n🆔 <b>Ariza raqami:</b> <code>${lead.id.slice(0, 8).toUpperCase()}</code>`;
 
   try {
@@ -356,7 +364,7 @@ const server = createServer(async (req, res) => {
         id,
         name: data.name.trim(),
         phone: data.phone,
-        note: data.note.trim(),
+        note: (data.note || "").trim(),
         month: data.month,
         duration: data.duration,
         travelers: data.travelers,
